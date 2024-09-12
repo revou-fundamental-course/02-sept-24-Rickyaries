@@ -3,9 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator Ricky Aries Wibisono</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <header class="main-header">
+        <h1>Welcome to Katik</h1>
+        <p>Hai Sobat Selamat Datang di Katik :)</p>
+    </header>
+
+    <main>
+        <section class="selection-content">
+            <button class="selection-btn" onclick="showSegitiga()">Segitiga</button>
+            <button class="selection-btn" onclick="showJajarGenjang()">Jajar Genjang</button>
+        </section>
+
+        <!-- Konten Segitiga -->
+        <section class="main-content-segitiga main-content">
+            <aside class="aside">
+                <header>
+                    <h1 class="luas-segitiga-header">Luas Segitiga</h1>
+                </header>
+                <div class="luas-segitiga-img"></div>
+                <article class="luas-segitiga-content">
+                    <p>Rumus Luas Segitiga:</p>
+                    <p>L = 1/2 (a * t )</p>
+                </article>
+
+                <hr />
+
+                <form onsubmit="event.preventDefault(); hitungLuasSegitiga();">
+                    <header>
+                        <h1 class="luas-segitiga-form-header">Hitung Luas Segitiga</h1>
+                    </header>
+
+                    <div class="input-wrapper">
+                        <label>Panjang Alas:</label>
+                        <input id="panjang-alas" type="number"/>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Tinggi:</label>
+                        <input id="tinggi" type="number"/>
+                    </div>
+                    <button type="submit" class="hitung-luas-segitiga">Hitung</button>
+                    <button type="button" class="reset-luas-segitiga" onclick="resetLuasSegitiga()">Reset</button>
+
+                    <p id="hasil-luas"></p>
+                </form>
+
+            </aside>
+
+            <aside class="aside">
+                <header>
+                    <h1 class="keliling-segitiga-header">Keliling Segitiga</h1>
+                </header>
+                <div class="luas-segitiga-img"></div>
+                <article class="keliling-segitiga-content">
+                    <p>Rumus Keliling Segitiga:</p>
+                    <p>K = S + S + S</p>
+                </article>
+
+                <hr />
+
+                <form onsubmit="event.preventDefault(); hitungKelilingSegitiga()">
+                    <header>
+                        <h1 class="keliling-segitiga-form-header">Hitung Keliling Segitiga</h1>
+                    </header>
+
+                    <div class="input-wrapper">
+                        <label>Panjang Sisi 1:</label>
+                        <input id="panjang-sisi1" type="number" required/>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Panjang Sisi 2:</label>
+                        <input id="panjang-sisi2" type="number" required/>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Panjang Sisi 3:</label>
+                        <input id="panjang-sisi3" type="number" required/>
+                    </div>
+                    <button type="submit" class="hitung-keliling-segitiga">Hitung</button>
+                    <button type="button" class="reset-keliling-segitiga" onclick="resetKelilingSegitiga()">Reset</button>
+
+                    <p id="hasil-keliling"></p>
+                </form>
+            </aside>
+        </section>
+
+        <!-- Konten Jajar Genjang -->
+        <section class="main-content-jajar-genjang main-content" style="display: none;">
+            <aside class="aside">
+                <header>
+                    <h1 class="luas-jajar-genjang-header">Luas Jajar Genjang</h1>
+                </header>
+                <div class="luas-jajar-genjang-img"></div>
+                <article class="luas-jajar-genjang-content">
+                    <p>Rumus Luas Jajar Genjang:</p>
+                    <p>L = a * t</p>
+                </article>
+
+                <hr />
+
+                <form onsubmit="event.preventDefault(); hitungLuasJajarGenjang();">
+                    <header>
+                        <h1 class="luas-jajar-genjang-form-header">Hitung Luas Jajar Genjang</h1>
+                    </header>
+
+                    <div class="input-wrapper">
+                        <label>Panjang Alas:</label>
+                        <input id="panjang-alas-jg" type="number"/>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Tinggi:</label>
+                        <input id="tinggi-jg" type="number"/>
+                    </div>
+                    <button type="submit" class="hitung-luas-jajar-genjang">Hitung</button>
+                    <button type="button" class="reset-luas-jajar-genjang" onclick="resetLuasJajarGenjang()">Reset</button>
+
+                    <p id="hasil-luas-jajar-genjang"></p>
+                </form>
+
+            </aside>
+
+            <aside class="aside">
+                <header>
+                    <h1 class="keliling-jajar-genjang-header">Keliling Jajar Genjang</h1>
+                </header>
+                <div class="keliling-jajar-genjang-img"></div>
+                <article class="keliling-jajar-genjang-content">
+                    <p>Rumus Keliling Jajar Genjang:</p>
+                    <p>K = 2 * (a + b)</p>
+                </article>
+
+                <hr />
+
+                <form onsubmit="event.preventDefault(); hitungKelilingJajarGenjang();">
+                    <header>
+                        <h1 class="keliling-jajar-genjang-form-header">Hitung Keliling Jajar Genjang</h1>
+                    </header>
+
+                    <div class="input-wrapper">
+                        <label>Panjang Alas:</label>
+                        <input id="panjang-alas-kj" type="number"/>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Panjang Sisi Miring:</label>
+                        <input id="panjang-sisi-miring-kj" type="number"/>
+                    </div>
+                    <button type="submit" class="hitung-keliling-jajar-genjang">Hitung</button>
+                    <button type="button" class="reset-keliling-jajar-genjang" onclick="resetKelilingJajarGenjang()">Reset</button>
+
+                    <p id="hasil-keliling-jajar-genjang"></p>
+                </form>
+
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        Ricky Aries Wibisono
+    </footer>
+
+    <script>
+        function showSegitiga() {
+            document.querySelector('.main-content-segitiga').style.display = 'flex';
+            document.querySelector('.main-content-jajar-genjang').style.display = 'none';
+        }
+
+        function showJajarGenjang() {
+            document.querySelector('.main-content-segitiga').style.display = 'none';
+            document.querySelector('.main-content-jajar-genjang').style.display = 'flex';
+        }
+
+        function hitungLuasSegitiga() {
+            const alas = document.getElementById('panjang-alas').value;
+            const tinggi = document.getElementById('tinggi').value;
+            const hasil = 0.5 * alas * tinggi;
+            document.getElementById('hasil-luas').textContent = `Luas Segitiga: ${hasil}`;
+        }
+
+        function resetLuasSegitiga() {
+            document.getElementById('panjang-alas').value = '';
+            document.getElementById('tinggi').value = '';
+            document.getElementById('hasil-luas').textContent = '';
+        }
+
+        function hitungKelilingSegitiga() {
+            const sisi1 = document.getElementById('panjang-sisi1').value;
+            const sisi2 = document.getElementById('panjang-sisi2').value;
+            const sisi3 = document.getElementById('panjang-sisi3').value;
+            const hasil = parseFloat(sisi1) + parseFloat(sisi2) + parseFloat(sisi3);
+            document.getElementById('hasil-keliling').textContent = `Keliling Segitiga: ${hasil}`;
+        }
+
+        function resetKelilingSegitiga() {
+            document.getElementById('panjang-sisi1').value = '';
+            document.getElementById('panjang-sisi2').value = '';
+            document.getElementById('panjang-sisi3').value = '';
+            document.getElementById('hasil-keliling').textContent = '';
+        }
+
+        function hitungLuasJajarGenjang() {
+            const alas = document.getElementById('panjang-alas-jg').value;
+            const tinggi = document.getElementById('tinggi-jg').value;
+            const hasil = alas * tinggi;
+            document.getElementById('hasil-luas-jajar-genjang').textContent = `Luas Jajar Genjang: ${hasil}`;
+        }
+
+        function resetLuasJajarGenjang() {
+            document.getElementById('panjang-alas-jg').value = '';
+            document.getElementById('tinggi-jg').value = '';
+            document.getElementById('hasil-luas-jajar-genjang').textContent = '';
+        }
+
+        function hitungKelilingJajarGenjang() {
+            const alas = document.getElementById('panjang-alas-kj').value;
+            const sisiMiring = document.getElementById('panjang-sisi-miring-kj').value;
+            const hasil = 2 * (parseFloat(alas) + parseFloat(sisiMiring));
+            document.getElementById('hasil-keliling-jajar-genjang').textContent = `Keliling Jajar Genjang: ${hasil}`;
+        }
+
+        function resetKelilingJajarGenjang() {
+            document.getElementById('panjang-alas-kj').value = '';
+            document.getElementById('panjang-sisi-miring-kj').value = '';
+            document.getElementById('hasil-keliling-jajar-genjang').textContent = '';
+        }
+    </script>
 </body>
 </html>

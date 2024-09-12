@@ -1,0 +1,119 @@
+.main-header {
+    text-align: center;
+}
+
+.selection-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.selection-btn {
+    height: 32px;
+    border: none;
+    border-radius: 12px;
+    background-color: #7f5af0;
+    color: #fffffe;
+}
+
+.luas-segitiga-header, .keliling-segitiga-header, .luas-jajar-genjang-header, .keliling-jajar-genjang-header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin: 0px;
+    background: #16161a;
+    text-align: center;
+    color: white;
+}
+
+.luas-segitiga-content, .luas-jajar-genjang-content, .keliling-jajar-genjang-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.luas-segitiga-img, .luas-jajar-genjang-img, .keliling-jajar-genjang-img {
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto 20px auto; /* Center the image horizontally */
+}
+
+.luas-segitiga-img {
+    height: 200px; /* Adjust height */
+    width: 70%; /* Adjust width */
+    background-size: contain;
+    background-image: url(https://asset.kompas.com/crops/ZwOr6ZrEtAtid5uZmYhDFijYPa4=/175x161:1573x1094/750x500/data/photo/2022/03/09/62288763c6d64.png);
+}
+
+.luas-jajar-genjang-img, .keliling-jajar-genjang-img {
+    height: 200px; /* Adjust height */
+    width: 70%; /* Adjust width */
+    background-size: contain;
+    background-image: url(https://akcdn.detik.net.id/community/media/visual/2021/09/20/jajar-genjang.jpeg?w=576);
+}
+
+/* Add this class to center the images */
+.centered-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+}
+
+
+.luas-segitiga-form-header, .luas-jajar-genjang-form-header, .keliling-jajar-genjang-form-header {
+    text-align: center;
+}
+
+.input-wrapper {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-wrapper>input {
+    width: 65%;
+}
+
+input[type=number] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.main-content-segitiga, .main-content-jajar-genjang {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.main-content-segitiga>aside, .main-content-jajar-genjang>aside {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.hitung-luas-segitiga, .hitung-luas-jajar-genjang, .hitung-keliling-jajar-genjang, .hitung-keliling-segitiga {
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 17px 55px;
+    background-color: #7f5af0;
+}
+
+.reset-luas-segitiga, .reset-luas-jajar-genjang, .reset-keliling-jajar-genjang, .reset-keliling-segitiga {
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 17px 55px;
+    background-color: #7f5af0;
+}
+
+footer {
+    text-align: center;
+    background-color: #16161a;
+    color: #fffffe;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
